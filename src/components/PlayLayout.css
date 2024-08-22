@@ -1,0 +1,68 @@
+.rain-container {
+  position: relative;
+  height: 100vh;
+}
+
+.rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: none;
+  background-size: 100px 100px;
+  animation: none;
+}
+
+.raindrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 50px;
+  background-color: rgba(128, 128, 128, 0.5);
+  opacity: 0.4;
+  animation: fall 2s linear infinite;
+  transform: rotate(-5deg);
+}
+
+.rain-container .raindrop:nth-child(1) {
+  top: 20vh;
+  left: 10px;
+  animation-delay: 0.1s;
+  height: 40px;
+  transform: rotate(-3deg);
+}
+
+.rain-container .raindrop:nth-child(2) {
+  top: 50vh;
+  left: 20px;
+  animation-delay: 0.2s;
+  height: 20px;
+  transform: rotate(-7deg);
+}
+
+.rain-container .raindrop:nth-child(3) {
+  top: 30vh;
+  left: 30px;
+  animation-delay: 0.3s;
+  height: 90px;
+  transform: rotate(-2deg);
+}
+
+.rain-container .raindrop:nth-child(4) {
+  top: 80vh;
+  left: 30px;
+  animation-delay: 0.3s;
+  height: 5px;
+  transform: rotate(-4deg);
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  100% {
+    transform: rotate(-5deg) translateY(100vh);
+  }
+}
